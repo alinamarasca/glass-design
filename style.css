@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+p {
+  color: #257df0;
+  opacity: 0.8;
+  padding: 10px;
+}
+main {
+  min-height: 100vh;
+  background: linear-gradient(to right top, #15d0dd, #257df0);
+  display: flex;
+  align-items: center; /*vertical alignment*/
+  justify-content: center; /*horizontal alignment*/
+  font-family: Arial, Helvetica, sans-serif;
+  /*background: linear-gradient(
+    to bottom,
+    white,
+    white 50%,
+    #85b7f8 50%,
+    #85b7f8
+  );
+  The rectangle in which to repeat. 
+  It can be fully wide in this case 
+  background-size: 100% 20px;*/
+}
+
+.glass {
+  background: white;
+  min-height: 80vh;
+  width: 60%;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.2)
+  );
+  border-radius: 0.6rem;
+  z-index: 2;
+  backdrop-filter: blur(1rem);
+  display: flex;
+}
+.circle1,
+.circle2 {
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.5)
+  );
+  position: absolute;
+  z-index: 1;
+  border-radius: 50%;
+}
+.circle1 {
+  height: 15rem;
+  width: 15rem;
+  top: 25%;
+  right: 10%;
+}
+.circle2 {
+  height: 25rem;
+  width: 25rem;
+  bottom: 2%;
+  left: 10%;
+}
+
+.menu-btn {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  list-style: none;
+  border-radius: 0.1rem;
+  color: #257df0;
+  font-weight: 300;
+  text-transform: uppercase;
+  width: 20rem;
+}
+.big-btn {
+  background-color: rgba(243, 155, 203, 0.8);
+  padding: 30px 30px;
+  margin-bottom: 10px;
+  list-style: none;
+  border-radius: 0.6rem;
+  border: 1px solid transparent;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  width: 10rem;
+}
+.user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+img {
+  border-radius: 50%;
+  width: 20rem;
+  height: 20rem;
+  padding: 1rem;
+  align-self: baseline;
+  position: relative;
+}
+/*img ::after {
+  content: "";
+  background: rgba(243, 155, 203, 1);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}*/
+.card {
+  background: linear-gradient(
+    to left top,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.4)
+  );
+  padding: 3rem;
+  margin: 2rem 3rem;
+  border-radius: 0.6rem;
+  box-shadow: 6px 6px 20px rgba(13, 125, 199, 0.7);
+}
+.dashboard {
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+}
+.dashboard p {
+  padding-left: 1rem;
+  padding-bottom: 2rem;
+}
+.links {
+  display: flex;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+
+.my-best {
+  align-self: center;
+  justify-content: space-evenly;
+}
