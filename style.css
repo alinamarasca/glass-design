@@ -210,14 +210,14 @@ img {
   align-self: baseline;
   position: relative;
 }
-/*img ::after {
+img ::after {
   content: "";
   background: rgba(243, 155, 203, 1);
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 100%;
   border-radius: 50%;
-}*/
+}
 .card {
   background: linear-gradient(
     to left top,
@@ -235,6 +235,7 @@ img {
   flex-direction: column;
   align-items: center;
   background: rgba(255, 255, 255, 0.2);
+  border-radius: 0.6rem 0 0 0.6rem;
 }
 .dashboard p {
   padding-left: 1rem;
