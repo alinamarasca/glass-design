@@ -112,7 +112,7 @@ body {
 p {
   color: #257df0;
   opacity: 0.8;
-  padding: 10px;
+  padding-top: 20px;
 }
 main {
   min-height: 100vh;
@@ -202,19 +202,22 @@ main {
 }
 img {
   border-radius: 50%;
-  width: 20rem;
-  height: 20rem;
-  padding: 1rem;
+  width: 15rem;
+  height: 15rem;
   align-self: baseline;
   position: relative;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .user::after {
   content: "";
   background-color: rgba(245, 129, 193, 0.2);
   border-radius: 50%;
-  width: 20rem;
-  height: 20rem;
+  width: 15rem;
+  height: 15rem;
   position: absolute;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .card {
