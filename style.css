@@ -1,3 +1,8 @@
+:root {
+  --sky-blue: #257df0;
+  --sky-turq: #15d0dd;
+  --darker-blue: #004ab3;
+}
 * {
   margin: 0;
   padding: 0;
@@ -8,72 +13,40 @@ body {
   padding: 0;
   overflow: hidden;
 }
-/*.heart {
-  position: absolute;
-  margin: 20px;
-  height: 170px;
-  width: 200px;
-  z-index: 1;
-  top: 25%;
-  right: 12%;
-  opacity: 0.6;
-}
-.heart:before,
-.heart:after {
-  position: absolute;
-  content: "";
-  width: 100px;
-  height: 160px;
-  background: rgb(255, 255, 255);
-  border-radius: 50px 50px 0 0;
-}
-.heart:before {
-  left: 100px;
-  -webkit-transform-origin: 0 100%;
-  transform-origin: 0 100%;
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-.heart:after {
-  right: 100px;
-  -webkit-transform-origin: 100% 100%;
-  transform-origin: 100% 100%;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-*/
+
+/*CLOUDS*/
 .cloud {
   position: absolute;
   left: 0;
   background: rgb(255, 255, 255);
-  border-radius: 1000px;
+  border-radius: 12rem;
   animation: crazy 35s infinite linear;
 }
 .cloud.big {
   top: 50%;
-  width: 300px;
-  height: 100px;
+  width: 21rem;
+  height: 7rem;
   margin-top: 0.5rem;
   animation-duration: 75s;
 }
 .cloud.small {
   top: 30%;
-  width: 60px;
-  height: 20px;
+  width: 4rem;
+  height: 1.3rem;
   margin-top: 0.5rem;
   animation-duration: 60s;
 }
 .cloud.mid {
   top: 20%;
-  width: 120px;
-  height: 40px;
+  width: 9rem;
+  height: 3rem;
   margin-top: 0.5rem;
   animation-duration: 62s;
 }
 .cloud.four {
   top: 80%;
-  width: 150px;
-  height: 50px;
+  width: 9.2rem;
+  height: 3.1rem;
   margin-top: 0.5rem;
   animation-duration: 68s;
 }
@@ -109,28 +82,27 @@ body {
     transform: translateX(0%);
   }
 }
-p {
-  color: #257df0;
-  opacity: 0.8;
-  padding-top: 20px;
+/*TYPOGRAPHY*/
+h2 {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: var(--darker-blue);
 }
+p {
+  color: var(--darker-blue);
+  opacity: 0.8;
+  padding-top: 1rem;
+  font-size: 1.125rem;
+}
+/*CONTENT*/
 main {
   min-height: 100vh;
   background: linear-gradient(to right top, #15d0dd, #257df0);
   display: flex;
   align-items: center; /*vertical alignment*/
   justify-content: center; /*horizontal alignment*/
-  font-family: Arial, Helvetica, sans-serif;
-  /*background: linear-gradient(
-    to bottom,
-    white,
-    white 50%,
-    #85b7f8 50%,
-    #85b7f8
-  );
-  The rectangle in which to repeat. 
-  It can be fully wide in this case 
-  background-size: 100% 20px;*/
+  font-family: "Oxygen", sans-serif;
 }
 
 .glass {
@@ -147,34 +119,11 @@ main {
   backdrop-filter: blur(1rem);
   display: flex;
 }
-/*.circle1,
-.circle2 {
-  background: linear-gradient(
-    to right bottom,
-    rgba(255, 255, 255, 0.8),
-    rgba(255, 255, 255, 0.5)
-  );
-  position: absolute;
-  z-index: 1;
-  border-radius: 50%;
-}
-.circle1 {
-  height: 15rem;
-  width: 15rem;
-  top: 25%;
-  right: 10%;
-}
-.circle2 {
-  height: 25rem;
-  width: 25rem;
-  bottom: 2%;
-  left: 10%;
-}*/
 
 .menu-btn {
   background-color: rgba(255, 255, 255, 0.5);
-  padding: 10px 20px;
-  margin-bottom: 10px;
+  padding: 0.8rem 1.6rem;
+  margin-bottom: 0.8rem;
   list-style: none;
   border-radius: 0.1rem;
   color: #257df0;
@@ -183,9 +132,16 @@ main {
   width: 20rem;
 }
 .big-btn {
-  background-color: rgb(245, 129, 193, 0.9);
+  background-image: linear-gradient(
+    45deg,
+    rgba(245, 129, 193, 0.9),
+    rgba(241, 32, 161, 0.9),
+    rgba(250, 30, 250, 0.9)
+  );
+  background-size: 300%;
+  background-position: left;
   padding: 10px 30px;
-  margin-bottom: 10px;
+  margin-bottom: 0.8rem;
   list-style: none;
   border-radius: 0.6rem;
   border: 1px solid transparent;
@@ -193,6 +149,12 @@ main {
   font-weight: 600;
   text-transform: uppercase;
   width: 10rem;
+  transition: background-position 1s;
+}
+.big-btn:hover,
+.big-btn:active {
+  border: 1px solid transparent;
+  background-position: right;
 }
 .user {
   display: flex;
@@ -206,8 +168,9 @@ img {
   height: 15rem;
   align-self: baseline;
   position: relative;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 1.125rem;
+  margin-bottom: 1.125rem;
+  object-fit: cover;
 }
 .user::after {
   content: "";
@@ -216,8 +179,8 @@ img {
   width: 15rem;
   height: 15rem;
   position: absolute;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 1.125rem;
+  margin-bottom: 1.125rem;
 }
 
 .card {
@@ -252,4 +215,14 @@ img {
 .my-best {
   align-self: center;
   justify-content: space-evenly;
+}
+@media (max-width: 1400px) {
+  .dashboard {
+    width: fit-content;
+    margin: 0;
+  }
+  .menu-btn {
+    width: 13rem;
+    margin: 0.5rem;
+  }
 }
